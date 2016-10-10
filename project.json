@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": true,
+    "copyToOutput": ["Views/Login/*", "Content/*"]
+  },
+  
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+    "version": "1.0.0",
+    "type": "platform"
+    },
+    "MySqlConnector": "0.1.0-alpha12",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
+    "Microsoft.AspNetCore.Owin": "1.0.0",
+    "Nancy": "2.0.0-barneyrubble",
+    "Microsoft.Extensions.Logging.Console": "1.0.0",
+    "Nancy.Session.InMemory": "0.9.1-pre",  
+    "Nancy.Session.Persistable": "0.9.1-pre", 
+    "FSharp.Core": "4.0.1.7-alpha",
+    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
+    "CryptoHelper": "2.0.0" 
+  },
+
+  "tools": {
+    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
+  },
+
+  "publishOptions": {
+    "include": [
+        "Content",
+        "Views",
+        "web.config"
+    ]
+  },
+
+  "scripts": {
+    "postpublish": "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
+  },
+  
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+        }
+      },
+      "imports": "dnxcore50"
+    }
+  }
+}

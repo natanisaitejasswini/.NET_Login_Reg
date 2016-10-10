@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.NET Registration Page</title>
+    <link rel="stylesheet" href="Content/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+</head> 
+  <body>
+    <button><a href='/'>Logout</a></button>
+    <h4>Welcome user, @ViewBag.User.first_name </h4>
+  </body>
+</html>
+
+  

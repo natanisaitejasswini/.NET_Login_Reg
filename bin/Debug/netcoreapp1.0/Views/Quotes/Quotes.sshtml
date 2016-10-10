@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Quotes</title>
+	<link rel="stylesheet" href="Content/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+</head>
+<body>
+    <h2>Welcome to QuotingApp</h2>
+    <form action='/quotes' method='post'>
+    Your Name: <input type="text" name='name'><br><br>
+    Your Quote: <textarea name='quote'></textarea><br><br>
+    <input type="submit" value="Add my Quote"><br>
+    </form>
+    <a href='/quotes'><button>Skip to Quotes</button></a>
+</body>
+</html>
